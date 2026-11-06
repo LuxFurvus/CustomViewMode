@@ -1,0 +1,12 @@
+{
+  "name": "custom-read-mode",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/core.test.cjs tests/worker.test.cjs",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

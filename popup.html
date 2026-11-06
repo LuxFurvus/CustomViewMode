@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CustomViewMode</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <header><span class="mark" aria-hidden="true">C</span><div><h1>CustomViewMode</h1><p>Ваш вид страницы</p></div></header>
+  <main>
+    <div id="origin">Загрузка…</div>
+    <p id="count" aria-live="polite"></p>
+    <p id="fit-count" aria-live="polite"></p>
+    <label class="toggle"><span>Применять правила сайта</span><input id="enabled" type="checkbox" role="switch" disabled></label>
+    <button id="start" class="primary" type="button" disabled>Настроить страницу</button>
+    <button id="clear-fit" type="button" disabled>Удалить автоподгонку сайта</button>
+    <button id="reset" type="button" disabled>Удалить правила сайта</button>
+    <p id="message" role="status"></p>
+    <p class="hint">Также: правая кнопка мыши →<br>Start View Customization</p>
+  </main>
+</body>
+</html>

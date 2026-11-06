@@ -1,0 +1,19 @@
+:root { color-scheme: light; font: 13px/1.5 system-ui, -apple-system, sans-serif; color: #1e293b; background: #f8fafc; }
+* { box-sizing: border-box; }
+body { width: 320px; margin: 0; }
+header { display: flex; align-items: center; gap: 11px; padding: 18px; border-bottom: 1px solid #e2e8f0; background: white; }
+.mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: #2563eb; color: white; font-size: 22px; font-weight: 700; }
+h1 { margin: 0; font-size: 17px; letter-spacing: -.4px; }
+header p { margin: 0; font-size: 11px; color: #64748b; }
+main { padding: 16px 18px; }
+#origin { font-weight: 600; overflow-wrap: anywhere; }
+#count, #fit-count { margin: 3px 0; color: #64748b; }
+.toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 15px 0 20px; cursor: pointer; }
+input { accent-color: #2563eb; width: 18px; height: 18px; }
+button { display: block; width: 100%; padding: 10px; margin-top: 9px; border: 1px solid #cbd5e1; border-radius: 8px; background: white; color: #334155; font: 600 12px/1.5 system-ui, sans-serif; cursor: pointer; }
+button.primary { color: white; background: #2563eb; border-color: #2563eb; }
+button:disabled, input:disabled { opacity: .45; cursor: default; }
+button:focus-visible, input:focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; }
+#message { color: #b91c1c; overflow-wrap: anywhere; margin: 10px 0 0; }
+#message:empty { display: none; }
+.hint { font-size: 11px; color: #64748b; margin: 17px 0 0; }

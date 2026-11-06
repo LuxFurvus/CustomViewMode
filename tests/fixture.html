@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>CustomViewMode test page</title>
+  <style>
+    body { font: 16px system-ui; margin: 24px; background: #f1f5f9; color: #1e293b; }
+    header { padding: 18px; background: #dbeafe; border-radius: 10px; }
+    main { display: grid; grid-template-columns: 1fr 240px; gap: 20px; margin-top: 20px; }
+    article, aside, footer, .escape, .plain-list, .actions { padding: 16px; background: white; border-radius: 10px; margin-bottom: 12px; }
+    #sidebar { display: block !important; }
+    iframe { width: 160px; height: 70px; border: 1px solid gray; }
+  </style>
+  <script>
+    window.pageClicks = 0;
+    window.submits = 0;
+    window.addEventListener('click', () => window.pageClicks++);
+    function route(path) { history.pushState({}, '', path); }
+  </script>
+</head>
+<body>
+  <header id="page-header">Тестовая страница</header>
+  <main>
+    <section id="cards">
+      <article class="story-card">Карточка 1</article>
+      <article class="story-card">Карточка 2</article>
+      <article class="story-card">Карточка 3</article>
+    </section>
+    <aside id="sidebar" style="display:block!important">Боковая панель</aside>
+  </main>
+  <div class="actions">
+    <a id="promo-link" href="/should-not-navigate">Рекламная ссылка</a>
+    <form onsubmit="window.submits++; return false"><button id="submit" type="submit">Отправить форму</button></form>
+  </div>
+  <div class="escape" id="promo:banner">Специальный символ в id</div>
+  <section class="plain-list"><div>Один</div><div>Два</div><div>Три</div></section>
+  <footer id="page-footer">Подвал</footer>
+  <iframe id="test-frame" srcdoc="<p>Содержимое iframe</p>"></iframe>
+</body>
+</html>

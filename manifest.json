@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "CustomViewMode",
+  "version": "1.1.0",
+  "description": "Скрывайте ненужные элементы, подгоняйте выбранный блок под окно и сохраняйте свой вид сайтов.",
+  "minimum_chrome_version": "106",
+  "permissions": ["contextMenus", "storage", "scripting", "webNavigation"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["core.js", "selectors.js", "fit.js", "content.js"],
+    "run_at": "document_start",
+    "all_frames": false
+  }],
+  "action": {
+    "default_title": "CustomViewMode",
+    "default_popup": "popup.html"
+  }
+}
